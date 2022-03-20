@@ -1,6 +1,7 @@
 import React from "react";
 import { ChatApi } from "../../../assets/api/ChatApi";
 import { MdClose } from "react-icons/md";
+import RightPanelWrapper from "./RightPanel.style";
 
 const RightPanel = () => {
   const openNav = () => {
@@ -12,7 +13,7 @@ const RightPanel = () => {
   };
 
   return (
-    <>
+    <RightPanelWrapper>
       <div className="chat_btn">
         <div className="card" onClick={openNav}>
           <img src="/images/chat.png" alt="Loading..." />
@@ -31,7 +32,7 @@ const RightPanel = () => {
             <div className="row">
               {ChatApi.map((list) => {
                 return (
-                  <div className="col-12 chart_section">
+                  <div className="col-12 chart_section" key={list.id}>
                     <div className="card_list d-flex">
                       <div className="img_section">
                         <img
@@ -82,7 +83,7 @@ const RightPanel = () => {
           </div>
         </div>
       </div>
-    </>
+    </RightPanelWrapper>
   );
 };
 

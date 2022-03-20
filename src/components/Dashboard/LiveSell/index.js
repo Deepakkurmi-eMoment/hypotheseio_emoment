@@ -1,6 +1,7 @@
 import React from "react";
 import { LiveSellListApi } from "../../../assets/api/LiveSellListApi";
 import Slider1 from "react-slick";
+import LiveSellWrapper from "./LiveSell.style";
 
 const SlickArrowLefts = ({ currentSlide, slideCount, ...props }) => (
   <button
@@ -80,7 +81,7 @@ const settings1 = {
 
 const LiveSell = () => {
   return (
-    <>
+    <LiveSellWrapper>
       <div className="container-fluid LiveSell my-5">
         <div className="row">
           <div className="col-12 m-0 pr-lg-2 pl-lg-2 pl-auto">
@@ -308,7 +309,7 @@ const LiveSell = () => {
           </div>
         </div>
       </div>
-    </>
+    </LiveSellWrapper>
   );
 };
 

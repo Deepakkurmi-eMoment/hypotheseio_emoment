@@ -1,5 +1,55 @@
-@import "./var";
-@import "./mixin";
+import { createGlobalStyle } from "styled-components";
+
+export const lightTheme = {
+  body: {
+    BodyMainColor: "#5D6588",
+    BodyTextMain: "#5D6588",
+    BodyTextPrimary: "#7D8396",
+    BodyHeader: "white",
+  },
+
+  rightPanel: {
+    RightPanelBg: "rgba(30, 31, 37, 0.8)",
+    RightPanelBgMobile: "rgba(30, 31, 37, 1)",
+  },
+
+  navbar: {
+    NavbarBg: "rgba(20, 21, 24, 0.8)",
+    NavbarActiveColor: "white",
+    NavbarColor: "#5D6588",
+    NavbarHoverColor: "white",
+    NavbarSmallSliderBg: "rgba(20, 21, 24, 1)",
+    NavbarSmallSliderCloseBtnColor: "white",
+  },
+
+  input: {
+    InputBg: "rgba(47, 50, 65, 0.5)",
+    InputColor: "#5D6588",
+  },
+
+  dropDownList: {
+    DropDownListBg: "rgba(30, 31, 37, 0.8)",
+    DropDownListColor: "white",
+  },
+
+  Card: {
+    CardBg: "rgba(30, 31, 37, 0.8)",
+    CardSecondaryBg: "rgba(30, 31, 37, 1)",
+    CardBg1: "rgba(33, 35, 41, 1)",
+    CardFilter: "blur(3.82692px)",
+    CardMainColor: "#A5ADCF",
+    CardPrimaryColor: "#5D6588",
+    CardMask: "linear-gradient(#fff 0 0) padding-box,linear-gradient(#fff 0 0)",
+    CardBorderColor1:
+      "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #D43259 100%) border-box",
+    CardBorderColor2:
+      "linear-gradient(180deg, #01F4C8 0%, rgba(0, 0, 0, 0) 100%) border-box",
+  },
+};
+
+export const darkTheme = {};
+
+export const GlobalStyle = createGlobalStyle`
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Sora:wght@400;500;600;700;800&display=swap');
 
@@ -71,7 +121,7 @@ body {
 h1,
 h2 {
     font-weight: 900;
-    color: $header;
+    color: ${(props) => props.theme.body.BodyHeader};
     margin-bottom: 0rem !important;
 }
 
@@ -93,7 +143,7 @@ p {
     transition: all 0.3s ease;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     border-radius: 0px 9.69367px 9.69367px 0px;
-    background: $RightPanelBg;
+    background: ${(props) => props.theme.rightPanel.RightPanelBg};
 }
 
 .LeftPanel {
@@ -142,7 +192,7 @@ p {
         overflow-x: hidden;
         transition: all 0.3s ease;
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-        background: $RightPanelBgMobile;
+        background: ${(props) => props.theme.rightPanel.RightPanelBgMobile};
     }
 
 
@@ -151,8 +201,4 @@ p {
     }
 }
 
-@import "./common/chat.scss";
-@import "./common/navbar.scss";
-@import "./components/Home/TokenListSlider.scss";
-@import "./components/Home/LiveSell.scss";
-@import "./components/Home/Graph.scss";
+`;

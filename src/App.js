@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
+import Dashboard from "./components/Dashboard";
 import Error from "./components/Error";
 import Layout from "./components/Layout";
 import Exchange from "./components/Exchange";
@@ -10,7 +10,7 @@ function App() {
     <>
       <Layout>
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/" element={<Dashboard />} />
           <Route exact path="/exchange" element={<Exchange />} />
           <Route path="*" element={<Error />} />
         </Routes>

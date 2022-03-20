@@ -3,7 +3,7 @@ import TokenListSlider from "./TokenListSlider";
 import LiveSell from "./LiveSell";
 import Graph from "./Graph";
 
-const Home = () => {
+const Dashboard = () => {
   return (
     <div className="LeftPanel">
       <TokenListSlider />
@@ -13,4 +13,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Dashboard;
