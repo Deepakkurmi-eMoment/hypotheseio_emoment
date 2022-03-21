@@ -31,23 +31,21 @@ const ModelSWrapper = styled.div`
     z-index: -1;
     opacity: 0;
     height: auto !important;
-    max-width: 445px !important;
+    max-width: 400px !important;
     margin: auto;
-    border-radius: 15px;
+    border-radius: 20px;
+    padding: 1rem 0.8rem;
     background: ${(props) => props.theme.Card.CardSecondaryBg};
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 
     .Model_section {
       height: auto !important;
       width: 100% !important;
-      padding: 1rem 2rem;
 
       .Model_top_Section {
-        border-bottom: 1px solid white;
-
         .title {
           p {
-            font-size: 1.4rem;
+            font-size: 1.1rem;
             color: white;
             font-weight: bold;
           }
@@ -56,7 +54,7 @@ const ModelSWrapper = styled.div`
         .close_div {
           .close_icon {
             color: white;
-            font-size: 2rem;
+            font-size: 1.5rem;
             cursor: pointer;
           }
         }
@@ -65,15 +63,23 @@ const ModelSWrapper = styled.div`
       .Model_bottom_Section {
         .search_box {
           input {
-            border: 2px solid white;
-            border-radius: 50px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            -webkit-box-align: center;
+            border: 1px solid rgb(206, 208, 217);
+            border-radius: 20px;
             overflow-y: scroll;
             width: 100%;
             outline: none;
             text-indent: 10px;
-            padding: 10px;
+            padding: 1rem 0.5rem;
             color: white;
-            background: transparent;
+            background: none;
+            white-space: nowrap;
+            appearance: none;
+            font-size: 16px;
+            transition: border 100ms ease 0s;
 
             &:hover,
             &:focus {
@@ -89,6 +95,7 @@ const ModelSWrapper = styled.div`
         .token_title {
           p {
             color: white;
+            font-size: 0.95rem;
           }
         }
 
@@ -125,18 +132,20 @@ const ModelSWrapper = styled.div`
             }
 
             img {
-              // border-radius: 50%;
+              border-radius: 50%;
+              height: 1.6rem;
+              width: auto;
             }
 
             .details_name {
               span {
                 color: white;
-                font-size: 0.98rem;
+                font-size: 0.85rem;
               }
 
               p {
                 color: #e0e0e0;
-                font-size: 0.85rem;
+                font-size: 0.8rem;
               }
             }
 

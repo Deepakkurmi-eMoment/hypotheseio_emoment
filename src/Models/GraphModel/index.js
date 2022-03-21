@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { RiCloseCircleLine } from "react-icons/ri";
+import { IoCloseSharp } from "react-icons/io5";
 import { useDispatch } from "react-redux";
 import { GraphApi } from "../../assets/api/Dashboard/GraphApi";
 import { GraphTokenSelect } from "../../redux/actions/DashboardActions";
@@ -54,21 +54,21 @@ const GraphModel = ({ graphModel, setGraphModel }) => {
             <div className="Model" id="popup">
               <div className="container-fluid Model_section">
                 <div className="row d-flex align-items-center Model_top_Section pb-2">
-                  <div className="col-lg-8 col-10 p-0 m-0">
+                  <div className="col-lg-8 col-10">
                     <div className="title">
                       <p>Select a token</p>
                     </div>
                   </div>
-                  <div className="col-lg-4 col-2  p-0 m-0 d-flex justify-content-end">
+                  <div className="col-lg-4 col-2 d-flex justify-content-end">
                     <div className="close_div">
-                      <RiCloseCircleLine
+                      <IoCloseSharp
                         className="close_icon"
                         onClick={() => setGraphModel(false)}
                       />
                     </div>
                   </div>
                 </div>
-                <div className="row Model_bottom_Section mt-4">
+                <div className="row Model_bottom_Section mt-3">
                   <div className="col-12">
                     <div className="search_box">
                       <input
@@ -97,7 +97,7 @@ const GraphModel = ({ graphModel, setGraphModel }) => {
                                 onClick={() => removeOverLay(val)}
                               >
                                 <div className="row">
-                                  <div className="col-10 d-flex align-items-center">
+                                  <div className="col-12 d-flex align-items-center">
                                     <img
                                       src={val.img1}
                                       alt="Loading..."
